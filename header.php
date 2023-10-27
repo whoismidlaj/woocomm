@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://kit.fontawesome.com/96bfb0d654.js" crossorigin="anonymous"></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -25,27 +26,17 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'woo-comm' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header id="masthead" class="site-header woo-header">
+		<div class="site-branding col-33">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$woo_comm_description = get_bloginfo( 'description', 'display' );
-			if ( $woo_comm_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $woo_comm_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			// the_custom_logo();
+			?>
+			<div class="logo_text">
+				LOGO
+			</div>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation woo-header-navigation col-66">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'woo-comm' ); ?></button>
 			<?php
 			wp_nav_menu(
@@ -56,4 +47,7 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		<div class="woo-header-widgets col-33">
+			<i class="fa-solid fa-cart-shopping"></i>
+		</div>
 	</header><!-- #masthead -->

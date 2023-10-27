@@ -11,20 +11,30 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'woo-comm' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'woo-comm' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'woo-comm' ), 'woo-comm', '<a href="https://midlaj.is-a.dev/">whoismidlaj</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer woo-footer">
+		<div class="container">
+		<div class="footer-info">
+			<div class="logo_text">
+				LOGO
+			</div>
+			</div>
+
+			<div class="footer-menu">
+				<h3>Product</h3>
+			</div>
+			
+			<div class="footer-menu">
+				<h3>Product</h3>
+			</div>
+			
+			<div class="footer-menu">
+				<h3>Product</h3>
+			</div>
+
+			<div class="footer-cta">
+				<input type="email">
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

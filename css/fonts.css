@@ -1,0 +1,34 @@
+/* Light */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 300; /* This indicates the font weight (light) */
+    src: url('../assets/fonts/SpaceGrotesk-Light.woff2') format('woff2');
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 400; /* This indicates the font weight (regular) */
+    src: url('../assets/fonts/SpaceGrotesk-Regular.woff2') format('woff2');
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 600; /* This indicates the font weight (semibold) */
+    src: url('../assets/fonts/SpaceGrotesk-Semibold.woff2') format('woff2');
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 700; /* This indicates the font weight (bold) */
+    src: url('../assets/fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 500; /* This indicates the font weight (medium) */
+    src: url('../assets/fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+}

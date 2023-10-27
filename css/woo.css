@@ -1,0 +1,157 @@
+/* Theme Styles
+--------------------------------------------- */
+:root {
+    --text-primary: 'Space Grotesk', sans-serif;
+}
+
+/* Colors */
+:root {
+    --c-primary: #fb0049;
+    --c-light: #fff;
+    --c-dark: #000;
+}
+
+body {
+    font-family: var(--text-primary);
+}
+
+/* a,
+a:hover,
+a:focus,
+a:visited {
+    
+} */
+
+.site-content,
+.woo-header,
+.woo-footer > .container {
+    padding: 0 1rem;
+    max-width: 1600px;
+    margin: auto;
+}
+
+/* Header
+--------------------------------------------- */
+.woo-header {
+	display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+	align-items: center;
+}
+
+.woo-header > div,
+.woo-footer > div {
+	padding: 1rem;
+}
+
+.site-branding img {
+	width: 200px;
+}
+
+.logo_text {
+    color: var(--c-dark);
+    font-family: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.woo-header-navigation ul {
+    justify-content: center;
+}
+
+.woo-header-navigation ul li {
+	padding: 0 1rem;
+}
+
+.woo-header-navigation ul li a {
+    color: var(--c-dark);
+	font-family: var(--text-primary);
+    font-weight: 600;
+}
+
+.woo-header-widgets {
+    display: flex;
+    justify-content: end;
+}
+
+.woo-header-widgets i {
+    color: var(--c-dark);
+}
+
+.woo-footer {
+    background-color: var(--c-dark);
+}
+
+.woo-footer .logo_text {
+    color: var(--c-light);
+}
+
+.woo-footer .container {
+	display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+	align-items: center;
+}
+
+/* Hero Featured
+--------------------------------------------- */
+
+.hero-featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.hero-featured > div {
+    /* min-height: 200px; */
+    height: 100%;
+    background: var(--c-primary);
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.hero-title-item {
+    background-color: var(--c-primary);
+    display: flex;
+    align-items: end;
+}
+
+.hero-title-item h1 {
+    color: var(--c-light);
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .hero-featured {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .hero-featured > div {
+        padding: 1.5rem;
+    }
+    
+    .hero-featured div:first-of-type {
+        grid-row: span 3;
+        aspect-ratio: 1/1;
+    }
+    
+    .hero-featured div:nth-of-type(2) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+/* Products Grid
+--------------------------------------------- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 30px;
+}
