@@ -18,12 +18,7 @@ get_header(); ?>
 		<div id="content" role="main">
 
             <div class="hero-featured">
-                <div></div>
-				<div class="hero-title-item">
-					<h1>REAL DESIGNS BY REAL ARTISTS FOR REAL PEOPLE</h1>
-				</div>
-				<div></div>
-				<div></div>
+                
             </div>
 
 			<div class="products-grid">
@@ -44,9 +39,12 @@ get_header(); ?>
 					?>
 					<div class="product">
 						<?php
-						echo '<a href="' . get_permalink() . '">' . woocommerce_get_product_thumbnail() . '</a>';
+						echo woocommerce_get_product_thumbnail();
+						echo '<div class="productCard-details">';
 						echo '<h2>' . get_the_title() . '</h2>';
 						echo '<span class="price">' . $product->get_price_html() . '</span>';
+						echo '</div>';
+						echo '<a class="btn addToCart" href="' . get_permalink() . '">Add to Cart</a>';
 						
 						// Additional product data can be displayed here
 						?>

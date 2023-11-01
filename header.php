@@ -35,9 +35,14 @@
 				LOGO
 			</div>
 		</div><!-- .site-branding -->
+		<div class="woo-header-widgets col-33">
+			<i class="fa-solid fa-cart-shopping"></i>
+			<button id="menuToggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa-sharp fa-solid fa-bars"></i></button>
+		</div>
+	</header><!-- #masthead -->
 
+		<!-- Nav Menu -->
 		<nav id="site-navigation" class="main-navigation woo-header-navigation col-66">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'woo-comm' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -47,7 +52,3 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
-		<div class="woo-header-widgets col-33">
-			<i class="fa-solid fa-cart-shopping"></i>
-		</div>
-	</header><!-- #masthead -->

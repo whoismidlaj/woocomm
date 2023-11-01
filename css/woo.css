@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
 /* Theme Styles
 --------------------------------------------- */
 :root {
-    --text-primary: 'Space Grotesk', sans-serif;
+    --text-primary: 'Work Sans', sans-serif;
 }
 
 /* Colors */
@@ -30,12 +32,30 @@ a:visited {
     margin: auto;
 }
 
+.site-content {
+    padding-block: 1rem;
+}
+
+/* Buttons */
+
+.btn {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Header
 --------------------------------------------- */
 .woo-header {
 	display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
 	align-items: center;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 .woo-header > div,
@@ -54,27 +74,23 @@ a:visited {
     font-size: 1.5rem;
 }
 
-.woo-header-navigation ul {
-    justify-content: center;
-}
-
-.woo-header-navigation ul li {
-	padding: 0 1rem;
-}
-
-.woo-header-navigation ul li a {
-    color: var(--c-dark);
-	font-family: var(--text-primary);
-    font-weight: 600;
-}
-
 .woo-header-widgets {
     display: flex;
+    align-items: center;
     justify-content: end;
+    gap: 2rem;
 }
 
 .woo-header-widgets i {
     color: var(--c-dark);
+    font-size: 1.2rem;
+}
+
+.woo-header-widgets .menu-toggle {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    padding: 0;
 }
 
 .woo-footer {
@@ -87,71 +103,99 @@ a:visited {
 
 .woo-footer .container {
 	display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
 	align-items: center;
+}
+
+/* Site Navigation
+--------------------------------------------- */
+.woo-header-navigation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: var(--c-light);
+}
+
+.menu-primary-menu-container {
+    width: 100%;
+    padding: 1rem;
+}
+
+.woo-header-navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.woo-header-navigation ul li {
+    width: 100%;
+	padding: 1rem;
+    background-color:var(--c-light);
+    border: 1px solid var(--c-dark);
+}
+
+.woo-header-navigation ul li a {
+    color: var(--c-dark);
+	font-family: var(--text-primary);
+    font-weight: 600;
 }
 
 /* Hero Featured
 --------------------------------------------- */
 
-.hero-featured {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
-.hero-featured > div {
-    /* min-height: 200px; */
-    height: 100%;
-    background: var(--c-primary);
-    border-radius: 30px;
-    padding: 2rem;
-}
-
-.hero-title-item {
-    background-color: var(--c-primary);
-    display: flex;
-    align-items: end;
-}
-
-.hero-title-item h1 {
-    color: var(--c-light);
-    font-size: 2.5rem;
-    margin-bottom: 0;
-}
-
-@media only screen and (min-width: 767px) {
-    .hero-featured {
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-    
-    .hero-featured > div {
-        padding: 1.5rem;
-    }
-    
-    .hero-featured div:first-of-type {
-        grid-row: span 3;
-        aspect-ratio: 1/1;
-    }
-    
-    .hero-featured div:nth-of-type(2) {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-}
 
 /* Products Grid
 --------------------------------------------- */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+}
+
+.product {
+    border: 1px solid var(--c-dark);
+    padding-bottom: 0.5rem;
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .product img {
     width: 100%;
-    border-radius: 30px;
+    border-bottom: 1px solid var(--c-dark);
+}
+
+.productCard-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.product h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-block: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product .price del {
+    display: none;
+}
+
+.addToCart {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem;
+    border: 1px solid var(--c-dark);
+    margin-inline: 0.5rem;
 }
