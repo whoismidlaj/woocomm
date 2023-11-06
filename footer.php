@@ -13,27 +13,7 @@
 
 	<footer id="colophon" class="site-footer woo-footer">
 		<div class="container">
-		<div class="footer-info">
-			<div class="logo_text">
-				LOGO
-			</div>
-			</div>
-
-			<div class="footer-menu">
-				<h3>Product</h3>
-			</div>
-			
-			<div class="footer-menu">
-				<h3>Product</h3>
-			</div>
-			
-			<div class="footer-menu">
-				<h3>Product</h3>
-			</div>
-
-			<div class="footer-cta">
-				<input type="email">
-			</div>
+			<span class="copyright">&copy 2023 - woocomm all right reserved</span>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

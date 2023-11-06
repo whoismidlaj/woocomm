@@ -36,7 +36,7 @@
 			</div>
 		</div><!-- .site-branding -->
 		<div class="woo-header-widgets col-33">
-			<i class="fa-solid fa-cart-shopping"></i>
+			<a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
 			<button id="menuToggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa-sharp fa-solid fa-bars"></i></button>
 		</div>
 	</header><!-- #masthead -->

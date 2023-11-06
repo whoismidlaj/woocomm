@@ -18,7 +18,12 @@ get_header(); ?>
 		<div id="content" role="main">
 
             <div class="hero-featured">
-                
+                <div class="glider">
+					<div class="slide"></div>
+					<div class="slide"></div>
+					<div class="slide"></div>
+				</div>
+				<div role="tablist" class="dots"></div>
             </div>
 
 			<div class="products-grid">
